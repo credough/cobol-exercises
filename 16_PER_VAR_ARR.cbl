@@ -1,0 +1,20 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ARRAY.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 SCORES.
+           02 SCORE PIC 99 OCCURS 5 TIMES.
+       01 I PIC 9.
+
+       PROCEDURE DIVISION.
+           MOVE 80 TO SCORE(1)
+           MOVE 90 TO SCORE(2)
+           MOVE 95 TO SCORE(3)
+           MOVE 89 TO SCORE(4)
+           MOVE 88 TO SCORE(5)
+
+           PERFORM VARYING I FROM 1 BY 1 UNTIL I > 5
+               DISPLAY "SCORE: " SCORE(I)
+           END-PERFORM.
+           STOP RUN.

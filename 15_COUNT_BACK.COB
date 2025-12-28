@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COUNTDOWN.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 I PIC 9.
+
+       PROCEDURE DIVISION.
+           PERFORM VARYING I FROM 5 BY -1 UNTIL I < 1
+               DISPLAY I
+           END-PERFORM.
+           STOP RUN.

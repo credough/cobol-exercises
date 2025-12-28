@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. VARYINGONE.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 I PIC 9.
+
+       PROCEDURE DIVISION.
+           PERFORM VARYING I FROM 1 BY 1 UNTIL I > 5
+               DISPLAY "I = " I
+           END-PERFORM.
+           STOP RUN.

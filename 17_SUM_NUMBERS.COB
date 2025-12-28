@@ -1,0 +1,15 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. SUMNUMBERS.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 I PIC 9.
+       01 TOTAL PIC 99 VALUE 0.
+
+       PROCEDURE DIVISION.
+           PERFORM VARYING I FROM 1 BY 1 UNTIL I > 5
+               ADD I TO TOTAL
+           END-PERFORM.
+
+           DISPLAY "TOTAL = " TOTAL.
+           STOP RUN.

@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. EVENLOOP.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 I PIC 99.
+
+       PROCEDURE DIVISION.
+           PERFORM VARYING I FROM 2 BY 2 UNTIL I > 10
+               DISPLAY I
+           END-PERFORM.
+           STOP RUN.
