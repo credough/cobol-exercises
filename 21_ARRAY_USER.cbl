@@ -1,0 +1,21 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ARRAY_INPUT.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 NUMBE.
+           05 NUM PIC 99 OCCURS 5 TIMES.
+       01 I PIC 9.
+
+       PROCEDURE DIVISION.
+       PERFORM VARYING I FROM 1 BY 1 UNTIL I > 5
+           DISPLAY "ENTER NUMBER("I")"
+           ACCEPT NUM(I)
+           END-PERFORM.
+
+           DISPLAY "YOU ENTERED:"
+           PERFORM VARYING I FROM 1 BY 1 UNTIL I > 5
+               DISPLAY NUM(I)
+           END-PERFORM.
+
+           STOP RUN.
