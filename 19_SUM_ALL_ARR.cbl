@@ -1,0 +1,26 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. SUMARR.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 ARRAY.
+           02 ARR PIC 99 OCCURS 7 TIMES.
+       01 I PIC 99.
+       01 TOTAL PIC 99.
+
+       PROCEDURE DIVISION.
+       MOVE 10 TO ARR(1).
+       MOVE 10 TO ARR(2).
+       MOVE 10 TO ARR(3).
+       MOVE 10 TO ARR(4).
+       MOVE 10 TO ARR(5).
+       MOVE 10 TO ARR(6).
+       MOVE 10 TO ARR(7).
+
+       PERFORM VARYING I FROM 1 BY 1 UNTIL I > 7
+           ADD ARR(I) TO TOTAL
+           END-PERFORM.
+
+           DISPLAY "TOTAL = "TOTAL
+
+           STOP RUN.
