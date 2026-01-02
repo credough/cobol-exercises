@@ -1,0 +1,23 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. REVERSE.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WORD.
+           02 WORDY PIC X(10) OCCURS 5 TIMES.
+
+       01 I PIC 9 VALUE 1.
+
+       PROCEDURE DIVISION.
+           DISPLAY "PLEASE INPUT 5 WORDS:"
+
+           PERFORM VARYING I FROM 1 BY 1 UNTIL I > 5
+               ACCEPT WORDY(I)
+           END-PERFORM
+
+           DISPLAY "REVERSED ORDER:"
+           PERFORM VARYING I FROM 5 BY -1 UNTIL I < 1
+               DISPLAY WORDY(I)
+           END-PERFORM
+
+           STOP RUN.
